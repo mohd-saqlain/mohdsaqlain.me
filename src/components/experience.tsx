@@ -3,10 +3,10 @@ import Tag from "./ui/tag";
 const exp = [
   {
     duration: "2023 — present",
-    title: "Frontend Engineer",
+    title: "Full Stack Engineer",
     company: "Androcoders",
     companyUrl: "https://androcoders.in/",
-    description: "I am currently working as the Full Stack Engineer",
+    description: "Started my journey as a React.js Developer and transitioned into a Full Stack Engineer role. I have built projects from scratch, both individually and as part of a team, while mastering technologies like React, Vanilla.js, MUI, TypeScript, Express.js, NestJS, and Node.js. From frontend development to backend implementation, I’ve also delved into deployment, utilizing AWS services such as Amplify, EC2, Route 53, Lightsail and S3.",
     technologies: ["JavaScript", "TypeScript", "React.js", "Node.js", "Express.js","Mongoose","Nest"],
   },
 

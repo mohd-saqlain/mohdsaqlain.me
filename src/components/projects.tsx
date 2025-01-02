@@ -38,7 +38,7 @@ const projects = [
   {
     title: "Survey App",
     description:
-      "A social media app built using MERN stack. The app is built following RESTful API design. The app has chat, group chat, notifications, and other features. The app is built following MVC architecture.",
+      "A hybrid property survey application built using React Native's Expo framework. The app includes location tracking, camera, and file access permissions for seamless functionality. It features an intuitive UI created with Gluestack UI and Tailwind CSS, with Redux Toolkit for state management and caching, and RTK Query for efficient asynchronous API calls.",
     imageUrl: "/assets/social-media.png",
     url: "https://github.com/androcoders21/survey-app",
     tags: [
@@ -54,7 +54,7 @@ const projects = [
   {
     title: "R2R-Care",
     description:
-      "A simple e-commerce app built using React. The app use Fake store API.",
+      "Developed a web application by translating Figma designs into functional code. Integrated Redux Toolkit for global state management and implemented Role-Based Access Control (RBAC). Established Private and Public routes using React Router and configured AWS Amplify to store user-uploaded images in an S3 bucket. Implemented three distinct login methods by managing component views and used Material-UI (MUI) to design responsive, visually appealing interfaces.",
     imageUrl: "/assets/r2rcare.png",
     url: "https://github.com/r2rcare/r2r-ui",
     tags: ["React", "Redux", "Material-UI", "AWS-Amplify","S3"],
@@ -62,7 +62,7 @@ const projects = [
   {
     title: "Azown-Real Estate",
     description:
-      "A simple e-commerce app built using React. The app use Fake store API.",
+      "Developed a web application with Context API for seamless data sharing across components. Built multi-step forms to handle numerous fields, using Formik and Yup for efficient data management and validation. Implemented optimized JavaScript logic for frontend search, sorting, and filtering. Styled the application using Bootstrap combined with custom CSS for an enhanced visual appeal.",
     imageUrl: "/assets/dashboard.png",
     url: "https://github.com/androcoders21/azown",
     tags: ["React", "Express", "MongoDB","Node.js","Context API"],
