@@ -15,10 +15,12 @@ export const metadata: Metadata = {
     default: "Mohd Saqlain",
     template: "%s | Mohd Saqlain",
   },
-  description: "My personal blog.",
+  description:
+    "Mohd Saqlain — Full Stack Engineer. I design, develop, and maintain web applications from front to back.",
   openGraph: {
     title: "Mohd Saqlain",
-    description: "My personal blog.",
+    description:
+      "Mohd Saqlain — Full Stack Engineer. I design, develop, and maintain web applications from front to back.",
     url: baseUrl,
     siteName: "Mohd Saqlain",
     locale: "en_US",

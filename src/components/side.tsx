@@ -12,7 +12,8 @@ export default function Side() {
           Full Stack Engineer  
         </h2>
         <p className="mt-4 max-w-xs leading-normal">
-          I design, develop, and maintain web applications from front to back.
+          I build and run production web, mobile and automation systems — from the
+          database to the deploy.
         </p>
         <Navbar />
       </div>

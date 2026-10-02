@@ -6,10 +6,23 @@ const exp = [
     title: "Full Stack Engineer",
     company: "Androcoders",
     companyUrl: "https://androcoders.in/",
-    description: "Started my journey as a React.js Developer and transitioned into a Full Stack Engineer role. I have built projects from scratch, both individually and as part of a team, while mastering technologies like React, Vanilla.js, MUI, TypeScript, Express.js, NestJS, and Node.js. From frontend development to backend implementation, I’ve also delved into deployment, utilizing AWS services such as Amplify, EC2, Route 53, Lightsail and S3.",
-    technologies: ["JavaScript", "TypeScript", "React.js", "Node.js", "Express.js","Mongoose","Nest"],
+    description:
+      "Joined as a React developer and grew into owning features end to end — API, database, deployment. Most of my work is production systems for real businesses: NestJS and Express services on MongoDB and PostgreSQL, Next.js and TanStack Start dashboards, and Expo apps shipped through EAS. Over the last year I’ve moved further into automation and AI: scheduled Playwright pipelines in Python that pull operational data into Postgres, and LLM-backed features using RAG, OpenRouter and tool calling. I run what I build — Dockerised services, AWS EC2, S3, Lambda and Route 53.",
+    technologies: [
+      "TypeScript",
+      "Python",
+      "NestJS",
+      "Next.js",
+      "TanStack Start",
+      "PostgreSQL",
+      "MongoDB",
+      "Redis",
+      "Expo",
+      "Playwright",
+      "Docker",
+      "AWS",
+    ],
   },
-
 ];
 
 type ExpItem = {

@@ -1,12 +1,15 @@
 import SocialLinks from "./social";
 import { MdDateRange } from "react-icons/md";
 
+// Bump this whenever the site content changes.
+const LAST_UPDATED = "Oct 2, 2026";
+
 export default function Footer() {
   return (
     <footer className="mb-16">
       <span className="flex items-center gap-2 p-2 rounded-lg bg-amber-200/20 w-max text-xs text-white mb-6">
         <MdDateRange />
-       Last updated on Sep 27, 2024
+        Last updated on {LAST_UPDATED}
       </span>
       <SocialLinks
         email="saqlainmohd639@gmail.com"

@@ -5,9 +5,21 @@ import Tag from "./ui/tag";
 interface ProjectProps {
   title: string;
   description: string;
-  url: string;
-  imageUrl: string;
+  /** Omitted for private / client work that has no public repo. */
+  url?: string;
+  /** Omitted until a screenshot exists; falls back to initials. */
+  imageUrl?: string;
   tags: string[];
+}
+
+function initials(title: string) {
+  return title
+    .replace(/[^a-zA-Z0-9 ]/g, " ")
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((word) => word[0].toUpperCase())
+    .join("");
 }
 
 export default function Project(props: ProjectProps) {
@@ -18,12 +30,13 @@ export default function Project(props: ProjectProps) {
         <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-yellow-100/5 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
         <div className="z-10 sm:order-2 sm:col-span-6">
           <h3>
+            {url ? (
             <a
               className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-[#FEE715]/80 focus-visible:text-[#FEE715]/80  group/link text-base"
               href={url}
               target="_blank"
               rel="noreferrer noopener"
-              aria-label="Spotify Profile (opens in a new tab)"
+              aria-label={`${title} (opens in a new tab)`}
             >
               <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
               <span>
@@ -45,6 +58,11 @@ export default function Project(props: ProjectProps) {
                 </span>
               </span>
             </a>
+            ) : (
+              <span className="font-medium leading-tight text-slate-200 text-base">
+                {title}
+              </span>
+            )}
           </h3>
           <p className="mt-2 text-sm leading-normal">{description}</p>
 
@@ -58,16 +76,25 @@ export default function Project(props: ProjectProps) {
             })}
           </ul>
         </div>
-        <Image
-          alt={title}
-          loading="lazy"
-          width="200"
-          height="48"
-          decoding="async"
-          className="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1"
-          style={{ color: "transparent" }}
-          src={imageUrl}
-        />
+        {imageUrl ? (
+          <Image
+            alt={title}
+            loading="lazy"
+            width="200"
+            height="48"
+            decoding="async"
+            className="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1"
+            style={{ color: "transparent" }}
+            src={imageUrl}
+          />
+        ) : (
+          <div
+            aria-hidden="true"
+            className="flex h-14 items-center justify-center rounded border-2 border-slate-200/10 bg-slate-200/5 text-sm font-semibold tracking-widest text-slate-500 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1"
+          >
+            {initials(title)}
+          </div>
+        )}
       </div>
     </>
   );
